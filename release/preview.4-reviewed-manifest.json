@@ -1,0 +1,235 @@
+{
+  "schema": "consequence-tank-public-candidate-v1",
+  "createdAt": "2026-10-29T19:02:07.292Z",
+  "version": "0.1.0-preview.4",
+  "status": "LOCAL REVIEW ONLY - NOT APPROVED FOR PUBLICATION",
+  "files": {
+    "source": [
+      {
+        "path": ".gitignore",
+        "bytes": 52,
+        "sha256": "94574c7a2b83bac18e42fbfa34f67ae6a3f61e82283dffdd83ee6d04ea29cf4f"
+      },
+      {
+        "path": ".npmrc",
+        "bytes": 17,
+        "sha256": "8f65a38bcd4e6fefd454f51ae9c3bd1c130d23a63164d60fb15fdaf852bde871"
+      },
+      {
+        "path": "COMMERCIAL-LICENSE.md",
+        "bytes": 1487,
+        "sha256": "2dbb0e970f89815e7455834feeeed29362db341688835cefdc40b8771461127a"
+      },
+      {
+        "path": "LICENSE.md",
+        "bytes": 5129,
+        "sha256": "d4b221abfbcc59848c407c578f0e15e66e000e03be4694663702ae162a33ea3f"
+      },
+      {
+        "path": "NOTICE.md",
+        "bytes": 1469,
+        "sha256": "389996e451c5e9b3609c287a6cd83373125335e73ee4917b0acb6b966d211fe0"
+      },
+      {
+        "path": "README.md",
+        "bytes": 6075,
+        "sha256": "0268c5bb5c99af43a482d8e8f3153b03a86345048b6eb10a996ab91fb8df2a69"
+      },
+      {
+        "path": "THIRD-PARTY-NOTICES.txt",
+        "bytes": 10212,
+        "sha256": "edf9d5ead7abb10963205da6994bb36ab6c21072ab795492f0f18062993e8892"
+      },
+      {
+        "path": "package-lock.json",
+        "bytes": 50220,
+        "sha256": "7c2c056afac567c2b6ec74cfe77afd44a2ee81dbe54b0fafa1ff6341f1bf929e"
+      },
+      {
+        "path": "package.json",
+        "bytes": 822,
+        "sha256": "b1a55ece8ea60b16b9685df2ff4ee30910f6dce73b1a3ae225d64f76029f8409"
+      },
+      {
+        "path": "playground/index.html",
+        "bytes": 667,
+        "sha256": "97a1574997287e2d3c7038be687f79c149d835b71d4ffd8a998d9e09cb72cea0"
+      },
+      {
+        "path": "scripts/checkModeLiveness.mjs",
+        "bytes": 3965,
+        "sha256": "953b7e69cbd665b54d40ce6864e01e15033d613e7e83fb19a0de8b3df6f59ba1"
+      },
+      {
+        "path": "src/appTypes.ts",
+        "bytes": 158,
+        "sha256": "50ed1e26e775497a6f31cae4d43cad31d880effacb05cc3b45f5b6218682a2df"
+      },
+      {
+        "path": "src/components/Timeline.tsx",
+        "bytes": 4150,
+        "sha256": "1ecc612af3cfcbec645c2caa316926d7887ecb252d060d35a4202f021597675f"
+      },
+      {
+        "path": "src/components/WarehouseGrid.tsx",
+        "bytes": 8622,
+        "sha256": "37a7a66e7bc15d58a412261b648b5c0bcb566bb7df6b07d996d59dc0dd78bb25"
+      },
+      {
+        "path": "src/evaluation/modeLiveness.test.ts",
+        "bytes": 2622,
+        "sha256": "d0828f46bdc4c3fba166c45d99deb13a9d101729877304f46e92a4a41603ff59"
+      },
+      {
+        "path": "src/evaluation/modeLiveness.ts",
+        "bytes": 4222,
+        "sha256": "43e2979a812c5f1ad72a37f3ebd0636e2ade30ad3259cf29dd4a29ea4c3c9383"
+      },
+      {
+        "path": "src/playground/Playground.tsx",
+        "bytes": 11518,
+        "sha256": "800e4f9188a956db000172a26ba44c78295aef125e0251bd93c64640ef4a425a"
+      },
+      {
+        "path": "src/playground/main.tsx",
+        "bytes": 254,
+        "sha256": "5a30579c40ceb125a638be601760a9b03f4d0526aef47644d1481224c8b57608"
+      },
+      {
+        "path": "src/playground/playground.css",
+        "bytes": 9204,
+        "sha256": "3b99ef9a79928e90539cf240c9ea1f6a333d74ac98a06e457b6db75e1debb307"
+      },
+      {
+        "path": "src/playground/session.test.ts",
+        "bytes": 4284,
+        "sha256": "2e3445d6ecf9a9ec9edaf6ca7504810d2bb00cc54307285881325fe4111b8000"
+      },
+      {
+        "path": "src/playground/session.ts",
+        "bytes": 4503,
+        "sha256": "259134686870fd9756b1365dda20076cf32cb9a5c146b3c67bbaaff08d86a952"
+      },
+      {
+        "path": "src/simulation/candidateRecovery.test.ts",
+        "bytes": 2540,
+        "sha256": "4bb15523ecde16fbe76cc3b86d86b93125768d00ae39b2d1718ac82ce5a35e43"
+      },
+      {
+        "path": "src/simulation/controlledExperiment.ts",
+        "bytes": 1009,
+        "sha256": "59f4e0ac1fc1ff468986ab6e849df5693d0d350a0fc122eaa4b156b9ffc14d57"
+      },
+      {
+        "path": "src/simulation/controlledRevision.test.ts",
+        "bytes": 6781,
+        "sha256": "88de311761104a2075eb1f1784bb748146c7e1a91be2a6a38193b07da2e1d0bf"
+      },
+      {
+        "path": "src/simulation/oracleNavigation.test.ts",
+        "bytes": 4027,
+        "sha256": "18df5ce751cd6924d64f1a01a229b64ec38a19605c58fc7125271f614f8aaaab"
+      },
+      {
+        "path": "src/simulation/pathfinding.d.ts",
+        "bytes": 488,
+        "sha256": "ee172d1abbe471dee808175dab04f4799031e0d9443dcfef2875f5a9aa8d448f"
+      },
+      {
+        "path": "src/simulation/physicalDetour.ts",
+        "bytes": 1266,
+        "sha256": "b5eb0dceda10de89831719f2cee3983fb91a93e652e343328bb8ae14f651eff1"
+      },
+      {
+        "path": "src/simulation/rng.ts",
+        "bytes": 604,
+        "sha256": "7c621733098e72b619df8ee05eb30f0241d1bc2af74eec54910995caf5c3b6b7"
+      },
+      {
+        "path": "src/simulation/scenarios.ts",
+        "bytes": 1710,
+        "sha256": "bc7e192b754c72ba976a071c6bc2785aabd97b037a3d0be81034c9ffc0eccdf5"
+      },
+      {
+        "path": "src/simulation/types.ts",
+        "bytes": 2000,
+        "sha256": "fd63b63d2603a277f2930c35b9a79ce1d1a218da18c7b6d59b1319c3ced04604"
+      },
+      {
+        "path": "src/simulation/warehouse.test.ts",
+        "bytes": 1460,
+        "sha256": "e1d9878fc605cf371ac36d5775291298f2d35ec8b6ef59ff4cbe3d14d37eb504"
+      },
+      {
+        "path": "src/simulation/warehouse.ts",
+        "bytes": 23417,
+        "sha256": "e41d2ecbf2f2d3232bea1ae495e692d367a7bbfc3a6b515a55e60e2c2075bd31"
+      },
+      {
+        "path": "src/vite-env.d.ts",
+        "bytes": 39,
+        "sha256": "bf144e3cdae616e27b064c8c2b94b14525e220fb3facc4cb4884d21b65eb5aa5"
+      },
+      {
+        "path": "tsconfig.json",
+        "bytes": 539,
+        "sha256": "02279160293288030f53ac2fdae7b5f3b3247e32a81bc8bd1b0546639ea1e02c"
+      },
+      {
+        "path": "vite.public.config.ts",
+        "bytes": 2146,
+        "sha256": "043ebf19520a44287b5713841ca3f1c65e2fde51d5dd2d764352ba101566df70"
+      }
+    ],
+    "site": [
+      {
+        "path": "COMMERCIAL-LICENSE.txt",
+        "bytes": 1487,
+        "sha256": "2dbb0e970f89815e7455834feeeed29362db341688835cefdc40b8771461127a"
+      },
+      {
+        "path": "LICENSE.txt",
+        "bytes": 5129,
+        "sha256": "d4b221abfbcc59848c407c578f0e15e66e000e03be4694663702ae162a33ea3f"
+      },
+      {
+        "path": "NOTICE.txt",
+        "bytes": 1469,
+        "sha256": "389996e451c5e9b3609c287a6cd83373125335e73ee4917b0acb6b966d211fe0"
+      },
+      {
+        "path": "THIRD-PARTY-NOTICES.txt",
+        "bytes": 10212,
+        "sha256": "edf9d5ead7abb10963205da6994bb36ab6c21072ab795492f0f18062993e8892"
+      },
+      {
+        "path": "assets/index-ChQifE0N.js",
+        "bytes": 194766,
+        "sha256": "2a04786d8edbd16e89c8d080ba836afc87c49482380d5db10a5fa1c9cba6c53d"
+      },
+      {
+        "path": "assets/index-D0hxpBki.css",
+        "bytes": 7965,
+        "sha256": "80be01d14e1bf8490d3ed08c3386cc7d48bcd93baea624eeeb8378bb6eb0775b"
+      },
+      {
+        "path": "index.html",
+        "bytes": 754,
+        "sha256": "9b7c9a829ea7ffa74144e0a3430f60b7eff085becb7374c2b53f2aa7cc9180c6"
+      }
+    ]
+  },
+  "exclusions": [
+    "Git history",
+    "local APIs and audit workspace",
+    "partner data",
+    "exports",
+    "notebooks",
+    "separate Warehouse Safety project"
+  ],
+  "limits": [
+    "Pattern scanning is not a guarantee that no sensitive material exists.",
+    "Review this exact inventory before publication.",
+    "No GitHub action, release, upload or visibility change is performed."
+  ]
+}

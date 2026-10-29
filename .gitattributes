@@ -1,0 +1,2 @@
+# Preserve the exact reviewed release bytes across Windows and Linux checkouts.
+* -text

@@ -1,0 +1,46 @@
+name: Verify playable release
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+      - name: Install locked dependencies
+        working-directory: source
+        run: npm ci --ignore-scripts
+      - name: Test the public source
+        working-directory: source
+        run: npm test
+      - name: Rebuild the playground
+        working-directory: source
+        run: npm run build
+      - name: Verify reviewed bytes and company notices
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+          const manifest = JSON.parse(await fs.readFile('release/preview.4-reviewed-manifest.json', 'utf8'));
+          const hash = async file => createHash('sha256').update(await fs.readFile(file)).digest('hex');
+          for (const entry of manifest.files.source) {
+            if (await hash(`source/${entry.path}`) !== entry.sha256) throw new Error(`Source changed: ${entry.path}`);
+          }
+          for (const entry of manifest.files.site) {
+            for (const base of ['docs', 'source/dist/public-playable']) {
+              if (await hash(`${base}/${entry.path}`) !== entry.sha256) throw new Error(`Site changed: ${base}/${entry.path}`);
+            }
+          }
+          for (const name of ['LICENSE.md', 'NOTICE.md', 'COMMERCIAL-LICENSE.md', 'THIRD-PARTY-NOTICES.txt']) {
+            if (await hash(name) !== await hash(`source/${name}`)) throw new Error(`Notice changed: ${name}`);
+          }
+          console.log('All reviewed source, static site, rebuilt assets and notices match.');
+          NODE
