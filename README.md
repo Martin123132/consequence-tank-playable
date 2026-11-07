@@ -12,6 +12,51 @@ Run a synthetic warehouse shift, change routing policies, inspect memory fields
 and compare deliveries, damage and energy. Five modes, four scenarios, repeatable
 seeds, replay links and copyable result snapshots. No account or API key required.
 
+## Three Replays To Try
+
+Watch the silent, captioned [36-second demo in the preview.4 release](https://github.com/Martin123132/consequence-tank-playable/releases/tag/v0.1.0-preview.4),
+then explore the same situations below. The clip uses actual playground
+captures with condensed playback, not real-time footage.
+
+Each replay opens paused. Press **Run**; use **Results** to inspect the totals.
+All three use Normal shift and finish at step 900.
+
+### 1. Keep Moving After The Gate Changes
+
+[Start at step 500](https://martin123132.github.io/consequence-tank-playable/#mode=adaptive_candidate_efficient&scenario=normal_shift&seed=42&step=500)
+| [Completed run](https://martin123132.github.io/consequence-tank-playable/#mode=adaptive_candidate_efficient&scenario=normal_shift&seed=42&step=900)
+
+**Efficient candidate, seed 42.** The gate changes at step 520. Watch routes
+change and deliveries continue. The first delivery after the shift is at 522;
+this selected run finishes with 162 deliveries.
+
+### 2. Recovery Has A Price
+
+[Start at step 213](https://martin123132.github.io/consequence-tank-playable/#mode=adaptive_candidate_lock&scenario=normal_shift&seed=5&step=213)
+| [Completed run](https://martin123132.github.io/consequence-tank-playable/#mode=adaptive_candidate_lock&scenario=normal_shift&seed=5&step=900)
+
+**Candidate memory, seed 5.** The first recovery starts at step 243. It uses
+local movement history, not Oracle's hazard-map knowledge. The run finishes
+with 144 deliveries and 616 synthetic damage. Recovery can restore movement
+while increasing damage; it is not a safety guarantee.
+
+### 3. What Full Map Knowledge Changes
+
+[Start at step 500](https://martin123132.github.io/consequence-tank-playable/#mode=oracle&scenario=normal_shift&seed=42&step=500)
+| [Completed run](https://martin123132.github.io/consequence-tank-playable/#mode=oracle&scenario=normal_shift&seed=42&step=900)
+
+**Oracle (planned), seed 42.** Oracle knows the current hazard map, not future
+changes. This run finishes with 163 deliveries and zero damage, but uses more
+energy than Direct routing. Zero damage here is not a guarantee for other runs.
+
+These are deliberately selected illustrations, not a benchmark or ranking.
+Policies have unequal costs, repair rules and information. These results do
+not isolate memory's effect or establish real-world savings or safety.
+
+Found something interesting or confusing? Use **Copy replay link** in Results
+and describe what you expected and what happened. Include your browser/device
+when reporting an interface problem; no personal or customer data is needed.
+
 ## This Release
 
 This repository publishes the reviewed `0.1.0-preview.4` playable release:
