@@ -12,6 +12,24 @@ Run a synthetic warehouse shift, change routing policies, inspect memory fields
 and compare deliveries, damage and energy. Five modes, four scenarios, repeatable
 seeds, replay links and copyable result snapshots. No account or API key required.
 
+## Gate-Change Challenge
+
+[Play the matched challenge](https://martin123132.github.io/consequence-tank-playable/challenge/)
+| [Replay just before the gate changes](https://martin123132.github.io/consequence-tank-playable/challenge/#challenge=gate-v1&seed=42&change=520&step=519)
+| [Challenge source and setup](challenge-source/README.md)
+
+Run **Direct routing** and **Success memory** side by side, move the gate-change
+time, and share an exact replay. Initial conditions, per-event costs and random
+task streams are paired; shared success memory is the intentional policy
+difference. Neither policy has Oracle's hazard-map knowledge or knows the future
+change time. Total and post-change results are shown separately, without a
+combined winner score.
+
+This is a separate `gate-v1` experiment, not a new mode for the original
+playground. Gate changes affect damaging cells, not physical walls. Compute and
+memory costs, collisions and real robot physics are not modelled. One replay is
+not a benchmark, and success memory can retain routes that become harmful.
+
 ## Three Replays To Try
 
 Watch the silent, captioned [36-second demo in the preview.4 release](https://github.com/Martin123132/consequence-tank-playable/releases/tag/v0.1.0-preview.4),
@@ -59,14 +77,24 @@ when reporting an interface problem; no personal or customer data is needed.
 
 ## This Release
 
-This repository publishes the reviewed `0.1.0-preview.4` playable release:
+This repository preserves the reviewed `0.1.0-preview.4` playable release:
 
 - `source/`: the unchanged 35-file source pack, including the actual simulation.
-- `docs/`: the unchanged seven-file static build served by GitHub Pages, plus
+- `docs/` root: the unchanged seven-file static build served by GitHub Pages, plus
   a `.nojekyll` deployment marker.
 - `release/preview.4-reviewed-manifest.json`: the original review inventory and
   hashes. Its historical review-only status records the pre-publication snapshot;
   this repository and release publish that approved snapshot.
+
+The independently reviewed `gate-v1` challenge adds:
+
+- `challenge-source/`: its 42-file source, test, configuration and notice pack.
+- `docs/challenge/`: its seven-file static build, hosted alongside the playground.
+- `release/gate-v1-reviewed-manifest.json`: its exact reviewed inventory and
+  hashes. The historical review-only status records the approved local snapshot.
+
+The original playground URLs, three replays, demo clip and preview.4 tag remain
+unchanged. Challenge replay links use the `/challenge/` path and their own version.
 
 The wrapper README, licence copies and verification workflow support publication.
 No private development history, partner data or local evidence workspace is included.
@@ -93,6 +121,12 @@ The public source has 36 tests. The release workflow checks source and site
 hashes, runs those tests and checks the rebuilt site against the reviewed build.
 The liveness audit has a Windows D-drive requirement as described in the source
 README. The live playground itself needs only a modern JavaScript browser.
+
+For the challenge, use the same install/test/build commands from
+`challenge-source/`, following [its setup instructions](challenge-source/README.md).
+Its separate workflow job runs 52 tests, rebuilds the challenge and checks every
+source, hosted and rebuilt file against the reviewed manifest. Both packs retain
+the same company terms and third-party notices.
 
 ## What It Does Not Claim
 
