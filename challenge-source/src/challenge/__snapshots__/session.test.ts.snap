@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matched policy conditions > freezes the gate-v1 default result so rule changes require deliberate review 1`] = `
+{
+  "completed": true,
+  "configuration": {
+    "change": 520,
+    "seed": 42,
+    "step": 900,
+  },
+  "direct": {
+    "damage": 840,
+    "deliveries": 138,
+    "energy": 4639.560000000266,
+    "energyPerDelivery": 33.62000000000193,
+    "firstPostChangeDeliveryStep": 541,
+    "movementAttempts": 5043,
+    "postChangeDamage": 604,
+    "postChangeDeliveries": 46,
+    "repairTicks": 1257,
+  },
+  "environment": {
+    "hazardStart": 220,
+    "openGateRows": {
+      "after": [
+        2,
+        3,
+        4,
+        11,
+        12,
+        13,
+      ],
+      "before": [
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+      ],
+    },
+    "scenario": "normal_shift",
+    "totalSteps": 900,
+  },
+  "limitations": [
+    "Synthetic units, not real energy or a safety assessment. One seed is not a benchmark.",
+    "Gate closure changes safe cells into damaging cells, not impassable walls. The southern gate remains safe. Shelves are visual landmarks.",
+    "No collisions, queues, realistic charging or compute/memory cost. Equal per-event costs do not imply equal totals.",
+    "Matched observations and costs; the memory mechanism is intentionally different. Neither policy uses Oracle planning or the hazard map.",
+  ],
+  "matchedRules": {
+    "agents": 7,
+    "damagePerHit": 2,
+    "difference": "Only Success memory writes and reads the shared field of completed delivery routes (pull 1.1, decay 0.998 per step). Damaged trips also reinforce it.",
+    "movementEnergyPerAttempt": 0.92,
+    "observation": "Position, target and own local movement history; no hazard map or future change time.",
+    "randomness": "paired-v1: movement noise keyed by seed/agent/step; task draws keyed by seed/agent/assignment ordinal, not global RNG consumption.",
+    "repairSteps": 3,
+    "workload": "Same initial agents/packages/depot; same per-agent task stream. Task arrival times can diverge with policy behaviour.",
+  },
+  "memory": {
+    "damage": 708,
+    "deliveries": 144,
+    "energy": 4826.320000000281,
+    "energyPerDelivery": 33.51611111111306,
+    "firstPostChangeDeliveryStep": 523,
+    "movementAttempts": 5246,
+    "postChangeDamage": 708,
+    "postChangeDeliveries": 44,
+    "repairTicks": 1054,
+  },
+  "schema": "consequence-tank-gate-challenge",
+  "version": "gate-v1",
+}
+`;

@@ -1,0 +1,27 @@
+{
+  "name": "consequence-tank",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.challenge.config.ts --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build --config vite.challenge.config.ts",
+    "preview": "vite preview --config vite.challenge.config.ts --host 127.0.0.1",
+    "test": "vitest run --config vite.challenge.config.ts --maxWorkers=2"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "pathfinding": "0.4.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^6.0.3",
+    "vite": "8.1.6",
+    "vitest": "4.1.12"
+  }
+}
