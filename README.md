@@ -30,6 +30,18 @@ playground. Gate changes affect damaging cells, not physical walls. Compute and
 memory costs, collisions and real robot physics are not modelled. One replay is
 not a benchmark, and success memory can retain routes that become harmful.
 
+## 60-Comparison Report
+
+[Read the report](https://martin123132.github.io/consequence-tank-playable/reports/gate-v1-60/)
+| [Data and reproduction](docs/reports/gate-v1-60/README.md)
+
+The unchanged `gate-v1` challenge across 20 fixed seeds and three gate timings:
+60 matched comparisons, 120 policy runs and 180 replay checkpoints. All cases
+are retained, with full-run totals and an equal 100-step post-change window.
+Memory's full-run results depend on timing; its first-100 damage is higher in
+56/60 comparisons. These are descriptive synthetic results, not 60 independent
+seeds, a combined winner score or a real-world safety claim.
+
 ## Three Replays To Try
 
 Watch the silent, captioned [36-second demo in the preview.4 release](https://github.com/Martin123132/consequence-tank-playable/releases/tag/v0.1.0-preview.4),
@@ -95,6 +107,11 @@ The independently reviewed `gate-v1` challenge adds:
 
 The original playground URLs, three replays, demo clip and preview.4 tag remain
 unchanged. Challenge replay links use the `/challenge/` path and their own version.
+
+The report at `docs/reports/gate-v1-60/` adds the reviewed HTML, data, replay links
+and portable verifier. Its `release-manifest.json` records the exact file hashes;
+CI verifies those bytes, recomputes the saved statistics and replays all 60 pairs.
+It changes neither the challenge engine nor either existing playable build.
 
 The wrapper README, licence copies and verification workflow support publication.
 No private development history, partner data or local evidence workspace is included.

@@ -68,3 +68,7 @@ jobs:
         run: npm audit --omit=dev --audit-level=moderate
       - name: Verify reviewed challenge bytes and company notices
         run: node scripts/verifyChallengeRelease.mjs
+      - name: Verify reviewed 60-comparison report and exact engine replays
+        run: |
+          node --input-type=module -e 'import fs from "node:fs"; import { createHash } from "node:crypto"; import assert from "node:assert/strict"; assert.equal(createHash("sha256").update(fs.readFileSync("docs/reports/gate-v1-60/release-manifest.json")).digest("hex"), "f074ab921e47f915d801e911d2d0249ae6f2b41cfd126421e0d3f6cc5fbae758");'
+          node docs/reports/gate-v1-60/verify.mjs --engine challenge-source

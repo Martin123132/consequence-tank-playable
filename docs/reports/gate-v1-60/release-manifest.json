@@ -1,0 +1,60 @@
+{
+  "schema": "consequence-tank-gate-report-release-v1",
+  "reportVersion": "gate-report-v1",
+  "engineVersion": "gate-v1",
+  "engineCommit": "c1a32bbe24f28b646e115c35228d769e2025990e",
+  "files": {
+    "protocol.json": {
+      "sha256": "02d7fbb5aa32ac4bd4cbc7bafd940a7178c4c43ec5ea016fb6d0d89621a92b35",
+      "bytes": 1144
+    },
+    "runs.jsonl": {
+      "sha256": "2f42a4db4f8c8444253e38c744ebf27a3ab790a35c4b8b5dd3630470d7092dea",
+      "bytes": 341182
+    },
+    "comparisons.csv": {
+      "sha256": "c3dab3cdae1dc112f9f984bdd99e6bc394653f169801f04aa1fbeeb45d8a0b34",
+      "bytes": 43330
+    },
+    "summary.json": {
+      "sha256": "e97bf0b474b541cb0fed2540a395eb29f9203a5f83fbad1704411063c6840095",
+      "bytes": 132891
+    },
+    "provenance.json": {
+      "sha256": "b3fb3d4aa3491643b1b5266310c8d72e2a39877cc53fc0bab07bd6d78713a3e9",
+      "bytes": 3792
+    },
+    "verification.json": {
+      "sha256": "7bdde8b5376d69456a426df44da7a2a02abeed0dcfad0de42cf81e0f537a4d21",
+      "bytes": 191
+    },
+    "index.html": {
+      "sha256": "224e838c7379e7de330d9821f819e639241b6908efb99ac19eed866c0c6e9220",
+      "bytes": 119256
+    },
+    "report.md": {
+      "sha256": "91fc76374bc1df5def42291b8ef4a1d6aa06deb9add5a833d7be98c7a4fcb9c3",
+      "bytes": 32527
+    },
+    "verify.mjs": {
+      "sha256": "e0700b4286f6b788f3adffa24daec55fda2de346a162d848be18969134034d08",
+      "bytes": 10165
+    },
+    "README.md": {
+      "sha256": "b408c0e6a9f92976f2c98ee7c4504f6bc9df338ca7b9a56bc02409475e9b0267",
+      "bytes": 3581
+    },
+    "LICENSE.md": {
+      "sha256": "d4b221abfbcc59848c407c578f0e15e66e000e03be4694663702ae162a33ea3f",
+      "bytes": 5129
+    },
+    "COMMERCIAL-LICENSE.md": {
+      "sha256": "2dbb0e970f89815e7455834feeeed29362db341688835cefdc40b8771461127a",
+      "bytes": 1487
+    },
+    "NOTICE.md": {
+      "sha256": "389996e451c5e9b3609c287a6cd83373125335e73ee4917b0acb6b966d211fe0",
+      "bytes": 1469
+    }
+  }
+}

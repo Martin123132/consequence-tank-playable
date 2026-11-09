@@ -1,0 +1,42 @@
+{
+  "version": "gate-report-v1",
+  "ruleVersion": "gate-v1",
+  "seeds": [
+    5000,
+    5001,
+    5002,
+    5003,
+    5004,
+    5005,
+    5006,
+    5007,
+    5008,
+    5009,
+    5010,
+    5011,
+    5012,
+    5013,
+    5014,
+    5015,
+    5016,
+    5017,
+    5018,
+    5019
+  ],
+  "changes": [
+    260,
+    520,
+    800
+  ],
+  "steps": 900,
+  "postWindow": 100,
+  "delta": "Success memory minus Direct routing. Higher deliveries, lower damage and lower movement energy are favourable, separately.",
+  "sample": "Consecutive seeds fixed before execution; the same 20 seeds are reused at all three timings. This is not 60 independent seeds or a population-random sample.",
+  "selection": [
+    "Maximum total delivery difference",
+    "Maximum first-100-post-change damage difference",
+    "Closest total delivery difference, then damage, then energy"
+  ],
+  "tieBreak": "Ascending seed, then gate-change step. Example rules are independent and may select the same comparison.",
+  "inference": "Descriptive means, medians, ranges and lower/equal/higher counts only. No p-values, confidence intervals, combined winner score or real-world claim."
+}
